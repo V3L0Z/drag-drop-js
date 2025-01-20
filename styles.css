@@ -1,7 +1,6 @@
 :root {
   --space-small: 8px;
   --space-medium: 16px;
-  --space-large: 24px;
   --base-color: hsv(209, 78%, 50%);
   --base-color-light: hsl(209, 78%, 75%);
   --base-color-dark: hsl(209, 78%, 25%);
@@ -14,12 +13,13 @@ body {
 }
 
 .container {
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   gap: var(--space-medium);
+
   background-color: var(--base-color-light);
 }
 
@@ -30,13 +30,14 @@ body {
 }
 
 .container > div {
-  width: 275px;
-  height: 275px;
-  background: var(--base-color-dark);
-  border-radius: 4px;
-  color: var(--white);
   display: flex;
   flex-direction: column;
+  width: 17em;
+  height: 17em;
+
+  background: var(--base-color-dark);
+  color: var(--white);
+  border-radius: 4px;
   box-shadow: 1px 2px 2px hsl(220deg 60% 50% / 0.2),
     2px 4px 4px hsl(220deg 60% 50% / 0.2), 4px 8px 8px hsl(220deg 60% 50% / 0.2),
     8px 16px 16px hsl(220deg 60% 50% / 0.2),
