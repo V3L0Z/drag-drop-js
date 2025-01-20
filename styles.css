@@ -1,0 +1,50 @@
+:root {
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 24px;
+  --base-color: hsv(209, 78%, 50%);
+  --base-color-light: hsl(209, 78%, 75%);
+  --base-color-dark: hsl(209, 78%, 25%);
+  --white: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: var(--space-medium);
+  background-color: var(--base-color-light);
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.container > div {
+  width: 275px;
+  height: 275px;
+  background: var(--base-color-dark);
+  border-radius: 4px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 2px 2px hsl(220deg 60% 50% / 0.2),
+    2px 4px 4px hsl(220deg 60% 50% / 0.2), 4px 8px 8px hsl(220deg 60% 50% / 0.2),
+    8px 16px 16px hsl(220deg 60% 50% / 0.2),
+    16px 32px 32px hsl(220deg 60% 50% / 0.2);
+}
+
+.container > div > * {
+  margin-left: var(--space-small);
+  margin-top: var(--space-medium);
+  margin-bottom: var(--space-medium);
+}
